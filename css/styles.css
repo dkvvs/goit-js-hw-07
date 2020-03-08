@@ -1,0 +1,46 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+/* Задание 3 */
+
+.foto__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.gallery__link {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.gallery__link img {
+  width: 100%;
+  height: auto;
+}
+
+/* Задание 6 */
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
