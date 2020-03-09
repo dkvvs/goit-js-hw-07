@@ -16,18 +16,30 @@ const images = [
   },
 ];
 
-const linkRef = images.map(image => {
-  const itemRef = document.createElement('li');
-  itemRef.classList.add('gallery__link');
-  const imgRef = document.createElement('img');
-  imgRef.src = image.url;
-  imgRef.alt = image.alt;
-  itemRef.appendChild(imgRef);
-  return itemRef;
-});
+// const linkRef = images.map(image => {
+//   const itemRef = document.createElement('li');
+//   itemRef.classList.add('gallery__link');
+//   const imgRef = document.createElement('img');
+//   imgRef.src = image.url;
+//   imgRef.alt = image.alt;
+//   itemRef.appendChild(imgRef);
+//   return itemRef;
+// });
+
+// const galleryRef = document.querySelector('#gallery');
+// galleryRef.classList.add('foto__gallery');
+
+// const listRef = document.querySelector('#gallery');
+// listRef.append(...linkRef);
 
 const galleryRef = document.querySelector('#gallery');
 galleryRef.classList.add('foto__gallery');
 
-const listRef = document.querySelector('#gallery');
-listRef.append(...linkRef);
+const linkRef = images.map(image => {
+  const imgUrl = image.url;
+  const altUrl = image.alt;
+  const element = `<li class="gallery__link"><img src="${imgUrl}" alt="${altUrl}"></li>`;
+  return element;
+});
+
+galleryRef.insertAdjacentHTML('afterbegin', linkRef.join(''));
