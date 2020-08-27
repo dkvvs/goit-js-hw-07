@@ -44,3 +44,15 @@
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+/* Задание 8 */
+#boxes {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-right: 10px;
+  margin-top: 10px;
+}
